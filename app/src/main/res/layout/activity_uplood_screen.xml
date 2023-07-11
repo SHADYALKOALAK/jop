@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UploodScreen">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardBackgroundColor="#66707070"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:id="@+id/image_profile"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/logo_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="24dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:text="أهـلاً وسـهلاً بـــك"
+        android:textColor="#8B4920"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@id/image_profile"
+        app:layout_constraintTop_toTopOf="@id/image_profile" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@id/tv_welcome"
+        app:layout_constraintStart_toStartOf="@id/tv_welcome"
+        app:layout_constraintTop_toBottomOf="@id/tv_welcome"
+        app:layout_constraintBottom_toBottomOf="@id/image_profile"/>
+    <TextView
+        android:id="@+id/tv_description"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        app:layout_constraintTop_toBottomOf="@id/image_profile"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="#F5F5F5"
+        android:layout_marginTop="12dp"
+        android:text="@string/text_7"
+        android:gravity="center"
+        android:paddingEnd="16dp"
+        android:textSize="14sp"
+        android:textColor="#010101"/>
+    <ImageView
+        android:id="@+id/image_ExportFile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/filegroup"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_description"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="19dp"
+        />
+    <ImageView
+        android:id="@+id/image_video"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/yougroup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_description"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="19dp"
+        />
+    <ImageView
+        android:id="@+id/image_post"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/post"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image_video"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="19dp"
+        />
+    <ImageView
+        android:id="@+id/image_homework"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/homework"
+        app:layout_constraintStart_toStartOf="@id/image_ExportFile"
+        app:layout_constraintTop_toBottomOf="@id/image_ExportFile"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="19dp"
+        />
+
+    <ImageView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="48dp"
+        android:src="@drawable/layer"
+        app:layout_constraintStart_toStartOf="@id/image_homework"
+        app:layout_constraintTop_toBottomOf="@id/image_ExportFile" />
+    <ImageView
+        android:id="@+id/image_speacke"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/speacke"
+        app:layout_constraintStart_toStartOf="@id/image_homework"
+        app:layout_constraintTop_toBottomOf="@id/image_homework"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="@id/image_post"
+        />
+    <LinearLayout
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="83dp"
+        android:background="#F5F5F5"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/icpn_homework" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="الواجبات المرفوعة"
+                android:textSize="12sp"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/img_10" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="التعليقات"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/emailadmin" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="الرسائل"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <androidx.cardview.widget.CardView
+        android:layout_width="339dp"
+        android:layout_height="588dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:cardElevation="4dp"
+        app:cardCornerRadius="35dp"
+        app:cardBackgroundColor="#E6EDF3"
+        app:cardPreventCornerOverlap="true"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <ImageView
+                android:id="@+id/icon_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="30dp"
+                android:src="@drawable/ic_baseline_arrow_forward_ios_24"
+                android:layout_gravity="end"/>
+            <EditText
+                android:id="@+id/edit_Title"
+                android:layout_width="278dp"
+                android:layout_height="57dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/edit_10"
+                android:layout_marginTop="30dp"
+                android:drawableStart="@drawable/icon_1"
+                android:paddingBottom="30dp"
+                android:paddingStart="15dp"
+                android:hint="العنوان"
+                android:gravity="top"
+                android:textColorHint="#010101"
+                android:paddingEnd="10dp"
+                android:paddingTop="5dp"/>
+            <EditText
+                android:id="@+id/edit_description"
+                android:layout_width="278dp"
+                android:layout_height="105dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/edit_10"
+                android:drawableStart="@drawable/icon_1"
+                android:layout_marginTop="7dp"
+                android:paddingBottom="60dp"
+                android:paddingStart="15dp"
+                android:hint="التفاصيل"
+                android:gravity="top"
+                android:textColorHint="#010101"
+                android:paddingEnd="10dp"
+                android:paddingTop="5dp"/>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layoutFile"
+                android:layout_width="278dp"
+                android:layout_height="57dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/edit_10"
+                android:layout_marginTop="7dp"
+                android:hint="رفع الملف"
+                android:textColorHint="#010101"
+                android:paddingEnd="10dp"
+                android:paddingTop="5dp">
+                <TextView
+                    android:id="@+id/ed_upLoadeFile"
+                    android:paddingBottom="29dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingStart="10dp"
+                    android:hint="رفع الملف"
+                    android:gravity="top"
+                    android:textColorHint="#010101"
+                    android:paddingEnd="10dp"
+                    android:paddingTop="5dp"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="15sp"/>
+                <Button
+                    android:id="@+id/btn_chooseFile"
+                    android:layout_width="91dp"
+                    android:layout_height="40dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="5dp"
+                    android:text="اختيار الملف "
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <EditText
+                android:inputType="textWebEmailAddress"
+                android:id="@+id/edit_Link"
+                android:layout_width="278dp"
+                android:layout_height="57dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/edit_10"
+                android:layout_marginTop="7dp"
+                android:paddingBottom="30dp"
+                android:paddingStart="15dp"
+                android:hint="إدراج الرابط"
+                android:gravity="top"
+                android:textColorHint="#010101"
+                android:paddingEnd="10dp"
+                android:paddingTop="5dp"/>
+            <EditText
+                android:id="@+id/edit_MoreInfo"
+                android:layout_width="278dp"
+                android:layout_height="105dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/edit_10"
+                android:layout_marginTop="7dp"
+                android:paddingBottom="30dp"
+                android:paddingStart="15dp"
+                android:hint="معلومات إضافية"
+                android:gravity="top"
+                android:textColorHint="#010101"
+                android:paddingEnd="10dp"
+                android:paddingTop="5dp"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="end"
+                android:layout_marginEnd="35dp"
+                android:layout_marginTop="12dp"
+                android:gravity="center_vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="تعني أن الحقل مطلوب"
+                    android:textSize="15sp"
+                    android:textColor="#EE2828"
+                    android:paddingEnd="4dp"/>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_1"
+                    />
+
+            </LinearLayout>
+            <Button
+                android:id="@+id/btn_upLoade"
+                android:layout_width="115dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="25dp"
+                android:backgroundTint="#B46A3C"
+                android:text="رفع"
+                android:textColor="@color/white"
+                android:textSize="19sp"
+                android:gravity="center"
+                android:background="@drawable/btn_shape"/>
+
+
+
+
+
+
+
+
+
+        </LinearLayout>
+
+
+
+
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

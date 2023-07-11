@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="830dp"
+    android:orientation="vertical"
+    tools:context=".SignUpScreen">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="42dp"
+        android:text="تسجيل حساب جديد "
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/logo_2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:text=" أهـــلاً وسهـــــلاً بـك عـزيــــزي الطـــالب "
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:maxLines="2"
+        android:textStyle="bold" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="24dp"
+        android:text=" إسم المستخدم "
+
+        android:textColor="@color/black"
+        android:textSize="15sp" />
+
+    <EditText
+        android:id="@+id/edit_userName"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/edit_login"
+        android:inputType="textEmailAddress"
+        android:hint="  ادخل إسم المستخدم"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:maxLines="2"
+        android:textColor="@color/black"
+        android:textColorHint="#CE9978"
+        android:textSize="15dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="24dp"
+        android:text=" الرقم الجامعي "
+        android:textColor="@color/black"
+        android:textSize="15sp" />
+
+    <EditText
+        android:id="@+id/edit_NumberOfUneversity"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/edit_login"
+        android:inputType="number"
+        android:hint="  ادخل رقمك الجامعي"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:textColor="@color/black"
+        android:maxLines="2"
+        android:textColorHint="#CE9978"
+        android:textSize="15dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="24dp"
+        android:text="كلمة المرور "
+        android:textColor="@color/black"
+        android:textSize="15sp" />
+
+    <EditText
+        android:id="@+id/edit_Password"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/edit_login"
+        android:inputType="textPassword"
+        android:cursorVisible="true"
+        android:gravity="end|center"
+        android:drawableStart="@drawable/ic_baseline_visibility_off_24"
+        android:hint="  ادخل كلمة المرور"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:maxLines="2"
+        android:textColor="@color/black"
+        android:textColorHint="#CE9978"
+        android:textSize="15dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="24dp"
+        android:text=" تاكيد كلمة المرور"
+        android:textColor="@color/black"
+        android:textSize="15sp" />
+
+    <EditText
+        android:id="@+id/edit_confirmPassword"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/edit_login"
+        android:drawableStart="@drawable/ic_baseline_visibility_off_24"
+        android:hint="  تاكيد كلمة المرور"
+        android:paddingStart="12dp"
+        android:inputType="textPassword"
+        android:cursorVisible="true"
+        android:gravity="end|center"
+        android:paddingEnd="12dp"
+        android:textColor="@color/black"
+        android:maxLines="2"
+        android:textColorHint="#CE9978"
+        android:textSize="15dp"
+        android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="تسجيل دخول ؟"
+            android:textColor="@color/primColor"
+            android:gravity="center"
+            android:textSize="18sp" />
+
+
+        <Button
+            android:id="@+id/btn_signUp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/btn_login"
+            android:text="تسجيل جديد"
+            android:textColor="@color/white"
+            android:textSize="21dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+</ScrollView>

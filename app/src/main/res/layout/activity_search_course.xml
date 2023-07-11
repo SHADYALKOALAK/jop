@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SearchCourse">
+    <TextView
+        android:id="@+id/tv_exit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="خروج"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textStyle="normal"
+        android:textSize="23sp"
+        android:textColor="#8B4920"
+        android:layout_marginTop="29dp"
+        android:layout_marginStart="31dp"/>
+    <TextView
+        android:id="@+id/tv_Question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" ما هي تصميم تجربة المستخدم؟"
+        android:textSize="19sp"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_exit"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="39dp"
+        />
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#6E707070"
+        app:layout_constraintTop_toBottomOf="@id/tv_Question"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginTop="10dp"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/divider"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="10dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/text_2"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:layout_marginBottom="2dp"/>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/download"
+                android:layout_marginTop="2dp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/text_4"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:layout_marginBottom="2dp"
+                android:layout_marginTop="4dp"/>
+
+
+
+
+
+            
+        </LinearLayout>
+    </ScrollView>
+
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

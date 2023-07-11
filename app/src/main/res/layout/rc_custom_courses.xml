@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        app:cardBackgroundColor="#FCF2DD"
+        app:cardCornerRadius="5dp"
+        android:layout_marginStart="16dp"
+        app:cardElevation="1dp"
+        android:layout_marginBottom="40dp"
+        app:cardPreventCornerOverlap="true">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center">
+
+
+            <ImageView
+                android:id="@+id/icon_courses"
+                android:layout_width="58dp"
+                android:layout_height="58dp"
+                android:src="@drawable/img_3"
+                android:layout_gravity="center" />
+
+            <TextView
+                android:id="@+id/tv_name_courses"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:text="تصميم تجربة المستخدم"
+                android:layout_marginTop="20dp"
+                android:textAlignment="center"/>
+
+            <TextView
+                android:id="@+id/tv_id_courses"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="9sp"
+                android:textColor="@color/grey"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:text="BMOB4313-s231"
+                android:textAlignment="center"/>
+
+
+
+
+
+
+
+
+
+
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>

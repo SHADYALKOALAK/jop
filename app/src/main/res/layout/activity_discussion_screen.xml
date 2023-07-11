@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DiscussionScreen">
+
+    <ImageView
+        android:id="@+id/icon_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="10dp"
+        android:src="@drawable/ic_baseline_arrow_forward_ios_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:id="@+id/image_profile"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="4dp"
+        android:src="@drawable/logo_2"
+        app:layout_constraintBottom_toBottomOf="@id/icon_arrow"
+        app:layout_constraintEnd_toStartOf="@id/icon_arrow"
+        app:layout_constraintTop_toTopOf="@id/icon_arrow" />
+
+    <TextView
+        android:id="@+id/tv_welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:text="@string/welcomeP"
+        android:textColor="@color/primColor"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@id/icon_arrow"
+        app:layout_constraintEnd_toStartOf="@id/image_profile"
+        app:layout_constraintTop_toTopOf="@id/icon_arrow" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="@id/tv_welcome"
+        app:layout_constraintStart_toStartOf="@id/tv_welcome"
+        app:layout_constraintTop_toBottomOf="@id/tv_welcome" />
+
+    <ImageView
+        android:id="@+id/ic_Not"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="16dp"
+        android:src="@drawable/img_2"
+        app:layout_constraintBottom_toBottomOf="@id/tv_welcome"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_welcome" />
+
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="25dp"
+        android:background="#9CFCF2DD"
+        android:gravity="end"
+        app:layout_constraintTop_toBottomOf="@id/tv_name">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="10dp"
+            android:text="الحوار الأسبوعي"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/img_m" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/shape_discussion"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/layout">
+
+        <TextView
+            android:id="@+id/tv_dis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:gravity="start"
+            android:text="موضوع البحث وموعد الشرح..."
+            android:textColor="@color/black"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tv_massage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="start"
+            android:paddingBottom="5dp"
+            android:layout_marginEnd="5dp"
+            android:text="@string/_08_12_2022"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_reply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="12dp"
+        android:text="إضافة رد"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout2" />
+
+    <EditText
+        android:id="@+id/edit_reply"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/edit_login"
+        android:layout_marginTop="10dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_reply"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="center_vertical"
+        android:paddingEnd="10dp"
+        android:paddingStart="10dp"
+        android:textSize="16sp"
+        android:textColor="@color/black" />
+
+
+
+    <Button
+        android:id="@+id/btn_reply"
+        android:layout_width="0dp"
+        android:layout_height="33dp"
+        android:layout_marginHorizontal="18dp"
+        android:layout_marginTop="12sp"
+        android:shadowRadius="0"
+        android:textColor="@color/white"
+        android:background="@color/primColor"
+        android:text="إضافة الرد"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/edit_reply"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+
+    <EditText
+        android:id="@+id/ed_comments"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="34dp"
+        android:background="@drawable/ed_shape"
+        android:padding="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:hint="@string/comments"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_reply" />
+
+
+
+
+    <Button
+        android:id="@+id/btnSend"
+        android:layout_width="80dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/btn_shape"
+        android:shadowColor="@color/white"
+        android:text="@string/send"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ed_comments" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/lyout_shape"
+        app:layout_constraintBottom_toTopOf="@id/bottom"
+        app:layout_constraintTop_toBottomOf="@id/btnSend"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:text="التعليقات : "
+            android:textColor="@color/black"
+            android:layout_margin="10dp"
+            android:textSize="16sp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rc_comments"
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/icon_model"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/icon_model" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:text="المودل"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/icon_homework"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/icon_homework" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:text="الواجبات"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/icon_education"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/img_l" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:text="التعليم الالكتروني"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iconProfile"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/img_1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:text="صفحة الطالب"
+                android:textColor="@color/black"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

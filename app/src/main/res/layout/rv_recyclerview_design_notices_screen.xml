@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="55dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#12BFBFBF"
+    android:layout_marginBottom="1dp">
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:buttonTint="#F4DDAF"
+        app:layout_constraintBottom_toBottomOf="@id/image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/image"
+        android:layout_marginEnd="18dp" />
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="35dp"
+        android:layout_height="34dp"
+        android:src="@drawable/logo_2"
+        app:layout_constraintEnd_toStartOf="@id/checkBox"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+    <TextView
+        android:id="@+id/tv_nameCourse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="مساق تصميم تجربة المستخدم"
+        app:layout_constraintTop_toTopOf="@id/image"
+        app:layout_constraintEnd_toStartOf="@id/image"
+        android:layout_marginEnd="10dp"
+        android:textSize="9sp"
+        android:layout_marginTop="5dp"
+        android:textColor="#030303"
+        />
+    <TextView
+        android:id="@+id/tv_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="تم إضافة واجب جديد"
+        app:layout_constraintBottom_toBottomOf="@id/image"
+        app:layout_constraintEnd_toEndOf="@id/tv_nameCourse"
+        android:textSize="9sp"
+        android:textColor="#030303"
+        android:layout_marginBottom="2dp"/>
+    <TextView
+        android:id="@+id/tv_Date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#8B4920"
+        android:text="قبل 3 ساعات"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="19dp"
+        android:textSize="8sp"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
