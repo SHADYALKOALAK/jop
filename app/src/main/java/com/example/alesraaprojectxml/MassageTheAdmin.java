@@ -58,6 +58,7 @@ public class MassageTheAdmin extends AppCompatActivity {
                         dialog.dismiss();
 
                         startActivity(new Intent(context,SureSend.class));
+                        overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
                     }
                 });
                 customDialog.btnNo.setOnClickListener(v12 -> {
@@ -73,15 +74,19 @@ public class MassageTheAdmin extends AppCompatActivity {
             Intent c = new Intent();
             c.setAction(Intent.ACTION_VIEW);
             c.setData(Uri.parse("https://student.israa.edu.ps/"));
-            startActivity(c);        });
+            startActivity(c);
+            overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
+        });
         binding.iconHomework.setOnClickListener(v -> {
             startActivity(new Intent(context, HomeWorkDescription.class));
+            overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
         });
         binding.iconModel.setOnClickListener(v -> {
             Intent intent = new Intent();
             intent.setAction(Intent.ACTION_VIEW);
             intent.setData(Uri.parse("https://elearn.israa.edu.ps/"));
             startActivity(intent);
+            overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
         });
         Cursor cursor = dBase.getComment();
         while (cursor.moveToNext()) {
@@ -93,15 +98,20 @@ public class MassageTheAdmin extends AppCompatActivity {
             Intent c = new Intent();
             c.setAction(Intent.ACTION_VIEW);
             c.setData(Uri.parse("https://student.israa.edu.ps/"));
-            startActivity(c);        });
+            startActivity(c);
+            overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
+        });
         binding.iconEducation.setOnClickListener(v -> {
             startActivity(new Intent(context, HomePageScreen.class));
+            overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
         });
         binding.icNot.setOnClickListener(v -> {
             startActivity(new Intent(context, Notices.class));
+            overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
         });
         binding.iconArrow.setOnClickListener(v -> {
             startActivity(new Intent(context,HomePageScreen.class));
+            overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
         });
         //massage
     }

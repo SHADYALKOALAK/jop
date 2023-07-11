@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.AnimationUtils;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -51,6 +52,8 @@ public class Rc_courses extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
                 context.startActivity(intent);
             }
         });
+        myViewHolder.binding.card.setAnimation(AnimationUtils.loadAnimation(context,R.anim.anim_recyclerview));
+
 
 
     }

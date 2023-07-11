@@ -6,22 +6,32 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#12BFBFBF"
     android:layout_marginBottom="1dp">
-    <CheckBox
-        android:id="@+id/checkBox"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:buttonTint="#F4DDAF"
-        app:layout_constraintBottom_toBottomOf="@id/image"
+<!--    <CheckBox-->
+<!--        android:id="@+id/checkBox"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:buttonTint="#F4DDAF"-->
+<!--        app:layout_constraintBottom_toBottomOf="@id/image"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="@id/image"-->
+<!--        android:layout_marginEnd="18dp" />-->
+    <ImageView
+        android:id="@+id/image_Delete"
+        android:layout_width="35dp"
+        android:layout_height="match_parent"
+        android:src="@drawable/ic_baseline_delete_24"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/image"
-        android:layout_marginEnd="18dp" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:visibility="invisible"/>
     <ImageView
         android:id="@+id/image"
         android:layout_width="35dp"
         android:layout_height="34dp"
         android:src="@drawable/logo_2"
-        app:layout_constraintEnd_toStartOf="@id/checkBox"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginEnd="16dp"
         app:layout_constraintBottom_toBottomOf="parent" />
     <TextView
         android:id="@+id/tv_nameCourse"

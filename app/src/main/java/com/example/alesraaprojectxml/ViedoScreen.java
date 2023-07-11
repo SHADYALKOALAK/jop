@@ -76,6 +76,7 @@ public class ViedoScreen extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(context, e_Learning.class));
+                overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
 
             }
         });
@@ -85,6 +86,7 @@ public class ViedoScreen extends AppCompatActivity {
                 facebook.setAction(Intent.ACTION_VIEW);
                 facebook.setData(Uri.parse(path));
                 startActivity(facebook);
+                overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
             }else {
                 Toast.makeText(context, "لم يقم المدرس بإدراج أي رابط ", Toast.LENGTH_SHORT).show();
             }
@@ -97,12 +99,14 @@ public class ViedoScreen extends AppCompatActivity {
                 c.setAction(Intent.ACTION_VIEW);
                 c.setData(Uri.parse("https://student.israa.edu.ps/"));
                 startActivity(c);
+                overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
             }
         });
         binding.icNot.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(context, Notices.class));
+                overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
             }
         });
         binding.iconModel.setOnClickListener(v -> {
@@ -110,21 +114,25 @@ public class ViedoScreen extends AppCompatActivity {
             c.setAction(Intent.ACTION_VIEW);
             c.setData(Uri.parse("https://elearn.israa.edu.ps/"));
             startActivity(c);
+            overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
         });
         binding.iconHomework.setOnClickListener(v -> {
             startActivity(new Intent(context, HomeWorkDescription.class));
+            overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
         });
         binding.iconProfile.setOnClickListener(v -> {
             Intent c = new Intent();
             c.setAction(Intent.ACTION_VIEW);
             c.setData(Uri.parse("https://student.israa.edu.ps/"));
             startActivity(c);
+            overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
         });
 
         binding.iconEducation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(context, HomePageScreen.class));
+                overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
             }
         });
 

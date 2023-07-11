@@ -6,6 +6,8 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import java.util.ArrayList;
+
 
 public class DBase extends SQLiteOpenHelper {
     public static final String DATABASE_NAME = "E_learning_DataBse";
@@ -194,6 +196,17 @@ public class DBase extends SQLiteOpenHelper {
         long re = database.insert("Noty", null, values);
         return re != -1;
 
+    }
+    public boolean deleteNotifications(int id) {
+        SQLiteDatabase database = this.getWritableDatabase();
+        String[] args = {id + ""};
+        int re = database.delete("Noty", "id = ?", args);
+        return re > 0;
+    }
+    public void deleteTableData() {
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.delete("Noty", null, null);
+        db.close();
     }
 
     public Cursor getNotifications() {

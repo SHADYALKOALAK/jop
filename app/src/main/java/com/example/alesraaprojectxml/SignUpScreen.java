@@ -23,6 +23,7 @@ public class SignUpScreen extends AppCompatActivity {
         dBase = new DBase(context);
         binding.tvLogin.setOnClickListener(v -> {
             startActivity(new Intent(context, LoginScreen.class));
+            overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
         });
         binding.btnSignUp.setOnClickListener(v -> {
             String userName = binding.editUserName.getText().toString().trim();
@@ -44,6 +45,7 @@ public class SignUpScreen extends AppCompatActivity {
                     startActivity(new Intent(context, LoginScreen.class));
                     Toast.makeText(context, "تم الحفظ بنجاح ", Toast.LENGTH_SHORT).show();
                     finish();
+                    overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
                 }
             }
         });

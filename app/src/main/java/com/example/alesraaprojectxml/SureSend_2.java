@@ -20,14 +20,17 @@ public class SureSend_2 extends AppCompatActivity {
         setContentView(binding.getRoot());
         binding.iconHomework.setOnClickListener(v -> {
             startActivity(new Intent(context, Comments_Screen.class));
+            overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
         });
         binding.iconComment.setOnClickListener(v -> {
             startActivity(new Intent(context, CommentsAdmin.class));
+            overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
         });
         binding.imageProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(context,Admin_1.class));
+                overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
             }
         });
 

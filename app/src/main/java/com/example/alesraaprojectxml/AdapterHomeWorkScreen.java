@@ -3,6 +3,7 @@ package com.example.alesraaprojectxml;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
+import android.view.animation.AnimationUtils;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -34,6 +35,8 @@ public class AdapterHomeWorkScreen extends RecyclerView.Adapter<RecyclerView.Vie
         MyViewHolder myViewHolder= (MyViewHolder) holder;
         myViewHolder.binding.marks.setText(arrayList.get(position).getMark());
         myViewHolder.binding.nameHomework.setText(arrayList.get(position).getNameHomWork());
+        myViewHolder.binding.card.setAnimation(AnimationUtils.loadAnimation(context,R.anim.anim_recyclerview));
+
 
 
 

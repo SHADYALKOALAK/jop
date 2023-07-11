@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.AnimationUtils;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -37,7 +38,10 @@ public class RcLecture extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         holder1.binding.tvName.setText(lectureModels.get(position).getName());
         holder1.binding.iconEmail.setOnClickListener(v -> {
             context.startActivity(new Intent(context, MassageTheAdmin.class));
+
+
         });
+        holder1.binding.card.setAnimation(AnimationUtils.loadAnimation(context,R.anim.anim_recyclerview));
     }
 
     @Override

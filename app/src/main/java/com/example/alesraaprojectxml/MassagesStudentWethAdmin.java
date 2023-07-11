@@ -37,7 +37,7 @@ public class MassagesStudentWethAdmin extends AppCompatActivity {
             @SuppressLint("Range") String massage = cursor.getString(cursor.getColumnIndex(DBase.COL_MASSAGE));
             @SuppressLint("Range") String titelMassage = cursor.getString(cursor.getColumnIndex(DBase.COL_TITlE_MASSAGE));
             arrayList.add(new ItemMassageStudentWithAdmin(nameProfile, titelMassage, massage));
-            binding.tvName.setText(nameProfile);
+//            binding.tvName.setText(nameProfile);
         }
         binding.rv.setAdapter(adapterMassageStudentWithAdmin);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(context);
@@ -45,15 +45,26 @@ public class MassagesStudentWethAdmin extends AppCompatActivity {
 
         binding.iconHomework.setOnClickListener(v -> {
             startActivity(new Intent(context, Comments_Screen.class));
+            overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
         });
         binding.iconComment.setOnClickListener(v -> {
             startActivity(new Intent(context, CommentsAdmin.class));
+            overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
         });
         binding.imageProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(context, Admin_1.class));
+                overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
             }
         });
+        binding.iconArrow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+                overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
+            }
+        });
+
     }
 }

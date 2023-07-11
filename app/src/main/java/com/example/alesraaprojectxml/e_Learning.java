@@ -37,6 +37,7 @@ public class e_Learning extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(context, HomePageScreen.class));
+                overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
 
             }
         });
@@ -52,12 +53,14 @@ public class e_Learning extends AppCompatActivity {
                 c.setAction(Intent.ACTION_VIEW);
                 c.setData(Uri.parse("https://student.israa.edu.ps/"));
                 startActivity(c);
+                overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
             }
         });
         binding.icNot.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(context, Notices.class));
+                overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
             }
         });
         binding.iconModel.setOnClickListener(v -> {
@@ -65,56 +68,66 @@ public class e_Learning extends AppCompatActivity {
             c.setAction(Intent.ACTION_VIEW);
             c.setData(Uri.parse("https://elearn.israa.edu.ps/"));
             startActivity(c);
+            overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
         });
         binding.iconHomework.setOnClickListener(v -> {
             startActivity(new Intent(context, HomeWorkDescription.class));
+            overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
         });
         binding.iconProfileScreen.setOnClickListener(v -> {
             Intent c = new Intent();
             c.setAction(Intent.ACTION_VIEW);
             c.setData(Uri.parse("https://student.israa.edu.ps/"));
             startActivity(c);
+            overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
         });
         binding.iconEducation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(context, HomePageScreen.class));
+                overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
             }
         });
         binding.tvYou.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(context,ViedoScreen.class));
+                overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
             }
         });
         binding.tvFile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(context,FileScreen.class));
+                overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
             }
         });
         binding.tvExportHomeWork.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(context,HomeWorkScreen.class));
+                overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
             }
         });
         binding.tvExportHomeWork1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(context,HomeWorkScreen.class));
+                overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
             }
         });
         binding.tvQuiz.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(context,ExamScreen.class));
+                overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
             }
         });
         binding.tvTook.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(context,DiscussionScreen.class));
+                overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
             }
         });
         binding.imageProfile.setOnClickListener(new View.OnClickListener() {
