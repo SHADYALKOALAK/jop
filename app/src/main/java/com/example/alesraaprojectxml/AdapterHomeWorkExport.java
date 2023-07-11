@@ -65,12 +65,12 @@ public class AdapterHomeWorkExport extends RecyclerView.Adapter<RecyclerView.Vie
                     dailogMarks.editMarks.setError("يجب عليك إدخال العلامة من 10 ");
                 } else {
                     if (dBase.insertMarkAdmin(mark, arrayList.get(position).getNameCourse())) {
+                        dBase.insertNotifications("تم الرد من قبل المحاضر");
                         Toast.makeText(context, " تم إرسال العلامة", Toast.LENGTH_SHORT).show();
                         dialog.dismiss();
                     }
                 }
             });
-
 
 
             dialog = builder.create();
