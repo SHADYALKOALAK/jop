@@ -108,22 +108,22 @@ public class UploodScreen extends AppCompatActivity {
                             finish();
                         }
                     }
-//                case 4:
-//                    if (!location.isEmpty() && !dis.isEmpty()) {
-//                        if (dBase.insertAdminDis(new UpLoadeAdminModel(location, dis))) {
-//                            dBase.insertNotifications("تم رفع مهمة جديدة");
-//                            Toast.makeText(context, "تم الرفع", Toast.LENGTH_SHORT).show();
-//                            finish();
-//                        }
-//                    }
-//                case 5:
-//                    if (!location.isEmpty() && !dis.isEmpty() && !link.isEmpty()) {
-//                        if (dBase.insertViedo(new UpLoadeAdminModel(location, dis, link))) {
-//                            dBase.insertNotifications("تم رفع مهمة جديدة");
-//                            Toast.makeText(context, "تم الرفع", Toast.LENGTH_SHORT).show();
-//                            finish();
-//                        }
-//                    }
+                case 4:
+                    if (!location.isEmpty() && !dis.isEmpty()) {
+                        if (dBase.insertAdminDis(new UpLoadeAdminModel(location, dis))) {
+                            dBase.insertNotifications("تم رفع مهمة جديدة");
+                            Toast.makeText(context, "تم الرفع", Toast.LENGTH_SHORT).show();
+                            finish();
+                        }
+                    }
+                case 5:
+                    if (!location.isEmpty() && !dis.isEmpty() && !link.isEmpty()) {
+                        if (dBase.insertViedo(new UpLoadeAdminModel(location, dis, link))) {
+                            dBase.insertNotifications("تم رفع مهمة جديدة");
+                            Toast.makeText(context, "تم الرفع", Toast.LENGTH_SHORT).show();
+                            finish();
+                        }
+                    }
 
             }
         });
