@@ -1,6 +1,7 @@
 package com.example.alesraaprojectxml;
 
 import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
@@ -94,6 +95,7 @@ public class Notices extends AppCompatActivity implements AdapterNotices.ViewHan
             }
 
         });
+//        String delete=null;
 
         ItemTouchHelper.SimpleCallback callback = new ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.START) {
             @Override
@@ -106,10 +108,10 @@ public class Notices extends AppCompatActivity implements AdapterNotices.ViewHan
             public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
                 int position = viewHolder.getAdapterPosition();
                 if (dBase.deleteNotifications(idNoty())) {
-                    Toast.makeText(context, "تم الحذف بنجاح", Toast.LENGTH_SHORT).show();
+
                     arrayList.remove(position);
-//                    arrayList_2.remove(position);
                     adapterNotices.notifyDataSetChanged();
+                    Toast.makeText(context, "تم الحذف بنجاح", Toast.LENGTH_SHORT).show();
                 } else {
                     Toast.makeText(context, "No", Toast.LENGTH_SHORT).show();
                 }
@@ -117,6 +119,7 @@ public class Notices extends AppCompatActivity implements AdapterNotices.ViewHan
         };
         ItemTouchHelper itemTouchHelper = new ItemTouchHelper(callback);
         itemTouchHelper.attachToRecyclerView(binding.recycler);
+
 
 
     }
@@ -131,6 +134,7 @@ public class Notices extends AppCompatActivity implements AdapterNotices.ViewHan
         return id;
 
     }
+
 
 
     @Override

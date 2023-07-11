@@ -44,10 +44,8 @@ public class AdapterNotices extends RecyclerView.Adapter<RecyclerView.ViewHolder
         myAdapter.binding.tvDate.setText(arrayList.get(position).getDate());
         myAdapter.binding.tvDescription.setText(arrayList.get(position).getDescription());
         myAdapter.binding.image.setImageResource(arrayList.get(position).getImage());
-        myAdapter.binding.checkBox.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            boolean isChick = myAdapter.binding.checkBox.isChecked();
 
-        });
+
 
     }
 
