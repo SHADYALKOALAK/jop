@@ -69,13 +69,6 @@ public class UploodScreen extends AppCompatActivity {
                 binding.editMoreInfo.setVisibility(View.GONE);
                 break;
         }
-        binding.iconArrow.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-
-            }
-        });
 
 
         binding.btnUpLoade.setOnClickListener(v -> {
@@ -119,7 +112,7 @@ public class UploodScreen extends AppCompatActivity {
                 case 5:
                     if (!location.isEmpty() && !dis.isEmpty() && !link.isEmpty()) {
                         if (dBase.insertViedo(new UpLoadeAdminModel(location, dis, link))) {
-                            dBase.insertNotifications("تم رفع مهمة جديدة");
+                            dBase.insertNotifications("تم رفع فيديو مصور");
                             Toast.makeText(context, "تم الرفع", Toast.LENGTH_SHORT).show();
                             finish();
                         }
@@ -145,6 +138,13 @@ public class UploodScreen extends AppCompatActivity {
                 // Launch file picker when a button or any UI element is clicked
                 openFilePicker();
 
+
+            }
+        });
+        binding.iconArrow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
 
             }
         });
