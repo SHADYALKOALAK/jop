@@ -37,9 +37,11 @@ public class SureSend extends AppCompatActivity {
             c.setAction(Intent.ACTION_VIEW);
             c.setData(Uri.parse("https://student.israa.edu.ps"));
             startActivity(c);
+            overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
         });
         binding.iconHomework.setOnClickListener(v -> {
             startActivity(new Intent(context, HomeWorkDescription.class));
+            overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
         });
         binding.iconProfile.setOnClickListener(v -> {
             Toast.makeText(context, "الصفحة غير متوفرة الان", Toast.LENGTH_SHORT).show();
@@ -48,12 +50,14 @@ public class SureSend extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(context, HomePageScreen.class));
+                overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
             }
         });
         binding.iconArrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(context,MassageTheAdmin.class));
+                overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
             }
         });
 

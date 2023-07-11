@@ -57,28 +57,35 @@ public class RegisteredCourses extends AppCompatActivity implements Rc_courses.H
         }
         binding.iconArrow.setOnClickListener(v -> {
             finish();
+            overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
         });
         binding.icNot.setOnClickListener(v -> {
             startActivity(new Intent(context, Notices.class));
+            overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
         });
         binding.iconHomework.setOnClickListener(v -> {
             startActivity(new Intent(context, HomeWorkDescription.class));
+            overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
         });
         binding.iconModel.setOnClickListener(v -> {
             Intent intent = new Intent();
             intent.setAction(Intent.ACTION_VIEW);
             intent.setData(Uri.parse("https://elearn.israa.edu.ps/"));
             startActivity(intent);
+            overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
         });
         binding.iconProfile.setOnClickListener(v -> {
             Intent c = new Intent();
             c.setAction(Intent.ACTION_VIEW);
             c.setData(Uri.parse("https://student.israa.edu.ps/"));
-            startActivity(c);        });
+            startActivity(c);
+            overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
+        });
         binding.iconEducation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(context, HomePageScreen.class));
+                overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
             }
         });
         binding.imageProfile.setOnClickListener(new View.OnClickListener() {
@@ -88,6 +95,7 @@ public class RegisteredCourses extends AppCompatActivity implements Rc_courses.H
                 c.setAction(Intent.ACTION_VIEW);
                 c.setData(Uri.parse("https://student.israa.edu.ps/"));
                 startActivity(c);
+                overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
             }
         });
     }
@@ -96,6 +104,7 @@ public class RegisteredCourses extends AppCompatActivity implements Rc_courses.H
     @Override
     public void clickHandle(int position, String nameCourse, String idCourse) {
         startActivity(new Intent(getBaseContext(), e_Learning.class));
+        overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
 
     }
 }

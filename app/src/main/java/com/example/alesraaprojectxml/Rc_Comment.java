@@ -3,6 +3,7 @@ package com.example.alesraaprojectxml;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
+import android.view.animation.AnimationUtils;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -33,6 +34,8 @@ public class Rc_Comment extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         ViewHolder holder1 = (ViewHolder) holder;
         holder1.binding.tvName.setText(commentsModels.get(position).getName());
         holder1.binding.tvComments.setText(commentsModels.get(position).getComment());
+        holder1.binding.card.setAnimation(AnimationUtils.loadAnimation(context,R.anim.anim_recyclerview));
+
 
 
     }

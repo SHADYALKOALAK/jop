@@ -77,7 +77,9 @@ public class FileScreen extends AppCompatActivity {
                 Intent c = new Intent();
                 c.setAction(Intent.ACTION_VIEW);
                 c.setData(Uri.parse("https://student.israa.edu.ps/"));
-                startActivity(c);            }
+                startActivity(c);
+                overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
+            }
         });
         binding.icNot.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -90,6 +92,7 @@ public class FileScreen extends AppCompatActivity {
             c.setAction(Intent.ACTION_VIEW);
             c.setData(Uri.parse("https://elearn.israa.edu.ps/"));
             startActivity(c);
+            overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
         });
         binding.iconHomework.setOnClickListener(v -> {
             startActivity(new Intent(context, HomeWorkDescription.class));
@@ -98,23 +101,28 @@ public class FileScreen extends AppCompatActivity {
             Intent c = new Intent();
             c.setAction(Intent.ACTION_VIEW);
             c.setData(Uri.parse("https://student.israa.edu.ps/"));
-            startActivity(c);        });
+            startActivity(c);
+            overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
+        });
         binding.iconEducation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(context, HomePageScreen.class));
+                overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
             }
         });
         binding.iconFile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(context, SearchCourse.class));
+                overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
             }
         });
         binding.iconArrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 finish();
+                overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
             }
         });
 

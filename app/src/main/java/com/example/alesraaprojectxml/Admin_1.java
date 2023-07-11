@@ -38,6 +38,7 @@ public class Admin_1 extends AppCompatActivity {
                     public void onClick(View v) {
                         Toast.makeText(context, "تم تسجيل الخروج بنجاح", Toast.LENGTH_SHORT).show();
                         startActivity(new Intent(context,LoginScreen.class));
+                        overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
                     }
                 });
                 customdailogBinding.btnNo.setOnClickListener(new View.OnClickListener() {
@@ -59,41 +60,49 @@ public class Admin_1 extends AppCompatActivity {
 
         binding.iconHomework.setOnClickListener(v -> {
             startActivity(new Intent(context, Comments_Screen.class));
+            overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
         });
         binding.iconComment.setOnClickListener(v -> {
             startActivity(new Intent(context, CommentsAdmin.class));
+            overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
         });
         binding.iconMassage.setOnClickListener(v -> {
             startActivity(new Intent(context, MassagesStudentWethAdmin.class));
+            overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
         });
         binding.imageExportFile.setOnClickListener(v -> {
             Intent intent = new Intent(context, UploodScreen.class);
             intent.putExtra("flag",1);
             startActivity(intent);
+            overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
 
         });
         binding.imagePost.setOnClickListener(v -> {
             Intent intent = new Intent(context, UploodScreen.class);
             intent.putExtra("flag",2);
             startActivity(intent);
+            overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
 
         });
         binding.imageHomework.setOnClickListener(v -> {
             Intent intent = new Intent(context, UploodScreen.class);
             intent.putExtra("flag",3);
             startActivity(intent);
+            overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
 
         });
         binding.imageSpeacke.setOnClickListener(v -> {
             Intent intent = new Intent(context, UploodScreen.class);
             intent.putExtra("flag",4);
             startActivity(intent);
+            overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
 
         });
         binding.imageVideo.setOnClickListener(v -> {
             Intent intent = new Intent(context, UploodScreen.class);
             intent.putExtra("flag",5);
             startActivity(intent);
+            overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
         });
     }
 }

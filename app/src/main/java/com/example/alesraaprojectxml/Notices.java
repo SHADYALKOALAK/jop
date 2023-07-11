@@ -54,27 +54,32 @@ public class Notices extends AppCompatActivity implements AdapterNotices.ViewHan
         binding.recycler2.setLayoutManager(linearLayoutManager_2);
         binding.iconArrow.setOnClickListener(v -> {
             finish();
+            overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
         });
         binding.iconHomework.setOnClickListener(v -> {
             startActivity(new Intent(context, HomeWorkDescription.class));
+            overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
         });
         binding.iconModel.setOnClickListener(v -> {
             Intent intent = new Intent();
             intent.setAction(Intent.ACTION_VIEW);
             intent.setData(Uri.parse("https://elearn.israa.edu.ps/"));
             startActivity(intent);
+            overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
         });
         binding.iconHomePage.setOnClickListener(v -> {
             Intent c = new Intent();
             c.setAction(Intent.ACTION_VIEW);
             c.setData(Uri.parse("https://student.israa.edu.ps/"));
             startActivity(c);
+            overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
         });
 
         binding.iconOnlineLearn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(context, HomePageScreen.class));
+                overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
             }
         });
         binding.tvClearAll.setOnClickListener(v -> {

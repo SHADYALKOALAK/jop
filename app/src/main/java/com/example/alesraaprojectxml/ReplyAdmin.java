@@ -34,6 +34,7 @@ public class ReplyAdmin extends AppCompatActivity {
                     builder.setView(customDialog.getRoot());
                     customDialog.btnYes.setOnClickListener(v1 -> {
                             startActivity(new Intent(context,SureSend_2.class));
+                        overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
                     });
                     customDialog.btnNo.setOnClickListener(v12 -> {
                         dialog.dismiss();

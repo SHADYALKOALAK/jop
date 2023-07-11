@@ -74,7 +74,7 @@
         android:textSize="13sp"/>
     <EditText
         android:id="@+id/edit_name_person"
-        android:layout_width="370dp"
+        android:layout_width="0dp"
         android:layout_height="50dp"
         android:background="@drawable/edit_sent"
         android:layout_marginStart="16dp"
@@ -107,7 +107,7 @@
 
     <EditText
         android:id="@+id/edit_TitleMassage"
-        android:layout_width="370dp"
+        android:layout_width="0dp"
         android:layout_height="50dp"
         android:background="@drawable/edit_sent"
         android:layout_marginStart="16dp"
@@ -136,7 +136,7 @@
         android:layout_marginTop="18dp"/>
     <EditText
         android:id="@+id/edit_massage"
-        android:layout_width="370dp"
+        android:layout_width="0dp"
         android:layout_height="151dp"
         android:background="@drawable/edit_sent"
         android:gravity="top"

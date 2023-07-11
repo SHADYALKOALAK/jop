@@ -13,6 +13,7 @@ import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.AnimationUtils;
 import android.widget.Toast;
 
 import com.example.alesraaprojectxml.databinding.ActivityHomePageScreenBinding;
@@ -54,9 +55,11 @@ public class HomePageScreen extends AppCompatActivity implements Rc_courses.Hand
         lectureModels.add(new LectureModel("تصميم تجربة المستخدم", "د. غسان أبو سمهدانة"));
         lectureModels.add(new LectureModel("تصميم تجربة المستخدم", "د. غسان أبو سمهدانة"));
         binding.rcCourses.setAdapter(rc_courses);
+
         //
         binding.rcCourses.setLayoutManager(new LinearLayoutManager(context, RecyclerView.HORIZONTAL, true));
         binding.rcLectureName.setAdapter(rcLecture);
+
         //
         Cursor cursor = dBase.getUser();
         while (cursor.moveToNext()) {

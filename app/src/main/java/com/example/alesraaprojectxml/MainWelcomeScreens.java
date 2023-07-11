@@ -28,6 +28,7 @@ public class MainWelcomeScreens extends AppCompatActivity {
         skip.setOnClickListener(v -> {
             Intent intent = new Intent(context, LoginScreen.class);
             startActivity(intent);
+            overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
             finish();
         });
 

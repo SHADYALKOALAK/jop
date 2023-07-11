@@ -83,6 +83,7 @@ public class DiscussionScreen extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(context, Notices.class));
+                overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
             }
         });
         binding.iconModel.setOnClickListener(v -> {
@@ -90,21 +91,25 @@ public class DiscussionScreen extends AppCompatActivity {
             c.setAction(Intent.ACTION_VIEW);
             c.setData(Uri.parse("https://elearn.israa.edu.ps/"));
             startActivity(c);
+            overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
         });
         binding.iconHomework.setOnClickListener(v -> {
             startActivity(new Intent(context, HomeWorkDescription.class));
+            overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
         });
         binding.iconProfile.setOnClickListener(v -> {
             Intent c = new Intent();
             c.setAction(Intent.ACTION_VIEW);
             c.setData(Uri.parse("https://student.israa.edu.ps/"));
             startActivity(c);
+            overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
 
         });
         binding.iconEducation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(context, HomePageScreen.class));
+                overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
             }
         });
         binding.iconArrow.setOnClickListener(v -> finish());

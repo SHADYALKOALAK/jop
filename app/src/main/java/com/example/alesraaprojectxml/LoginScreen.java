@@ -31,6 +31,7 @@ public class LoginScreen extends AppCompatActivity {
         boolean isTrue=sharedPreferences.getBoolean("x",false);
         if (isTrue) {
             startActivity(new Intent(context,HomePageScreen.class));
+            overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
         }
 
 
@@ -72,6 +73,7 @@ public class LoginScreen extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(context,SignUpScreen.class));
+                overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
             }
         });
 
@@ -86,12 +88,14 @@ public class LoginScreen extends AppCompatActivity {
     private boolean chickLogin(String number, String password) {
         if (number.equals("123") && password.equals("Admin")) {
             startActivity(new Intent(context, Admin_1.class));
+            overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
             return true;
         }
         Cursor cursor = dBase.getUser();
         while (cursor.moveToNext()) {
             if (number.equals(cursor.getString(cursor.getColumnIndex(DBase.COL_NUMBER))) && password.equals(cursor.getString(cursor.getColumnIndex(DBase.COL_PASSWORD)))) {
                 startActivity(new Intent(context, HomePageScreen.class));
+                overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
                 return true;
             }
         }

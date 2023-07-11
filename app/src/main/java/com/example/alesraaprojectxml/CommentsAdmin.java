@@ -36,11 +36,11 @@ public class CommentsAdmin extends AppCompatActivity {
         binding.rv.setAdapter(adapterCommentsAdmin);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(context);
         binding.rv.setLayoutManager(linearLayoutManager);
-        Cursor cursor = dBase.getUser();
-        while (cursor.moveToNext()) {
-            nameProfile = cursor.getString(cursor.getColumnIndex(DBase.COL_NAME));
-            binding.tvName.setText(nameProfile);
-        }
+//        Cursor cursor = dBase.getUser();
+//        while (cursor.moveToNext()) {
+//            nameProfile = cursor.getString(cursor.getColumnIndex(DBase.COL_NAME));
+//            binding.tvName.setText(nameProfile);
+//        }
 
         Cursor commentAdmin = dBase.getCommentAdmin();
         while (commentAdmin.moveToNext()) {
@@ -51,14 +51,17 @@ public class CommentsAdmin extends AppCompatActivity {
 
         binding.iconHomework.setOnClickListener(v -> {
             startActivity(new Intent(context, Comments_Screen.class));
+            overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
         });
         binding.iconMassage.setOnClickListener(v -> {
             startActivity(new Intent(context, MassagesStudentWethAdmin.class));
+            overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
         });
         binding.imageProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(context, Admin_1.class));
+                overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
             }
         });
 

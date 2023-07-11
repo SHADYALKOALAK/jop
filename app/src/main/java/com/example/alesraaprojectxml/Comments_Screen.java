@@ -43,11 +43,11 @@ public class Comments_Screen extends AppCompatActivity implements AdapterHomeWor
         adapterHomeWorkExport = new AdapterHomeWorkExport(context, arrayList, viewHandle_inter);
         binding.rv.setAdapter(adapterHomeWorkExport);
         binding.rv.setLayoutManager(new LinearLayoutManager(context));
-        Cursor cursor = dBase.getUser();
-        while (cursor.moveToNext()) {
-            nameProfile = cursor.getString(cursor.getColumnIndex(DBase.COL_NAME));
-
-        }
+//        Cursor cursor = dBase.getUser();
+//        while (cursor.moveToNext()) {
+//            nameProfile = cursor.getString(cursor.getColumnIndex(DBase.COL_NAME));
+//
+//        }
 
         Cursor filePath = dBase.getPathFile();
         while (filePath.moveToNext()) {
@@ -58,9 +58,11 @@ public class Comments_Screen extends AppCompatActivity implements AdapterHomeWor
 
         binding.iconComment.setOnClickListener(v -> {
             startActivity(new Intent(context, CommentsAdmin.class));
+            overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
         });
         binding.iconMassage.setOnClickListener(v -> {
             startActivity(new Intent(context, MassagesStudentWethAdmin.class));
+            overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
         });
 
 
