@@ -87,7 +87,7 @@ public class UploodScreen extends AppCompatActivity {
                 case 1:
                     if (!location.isEmpty() && !dis.isEmpty() && !filePath.isEmpty()) {
                         if (dBase.insertAdminFile(new UpLoadeAdminModel(location, dis, filePath))) {
-                            dBase.insertNotifications("تم رفع مهمة جديدة");
+                            dBase.insertNotifications("تم رفع ملف جديد");
                             Toast.makeText(context, "تم الرفع", Toast.LENGTH_SHORT).show();
                             finish();
                         }
@@ -95,7 +95,7 @@ public class UploodScreen extends AppCompatActivity {
                 case 2:
                     if (!location.isEmpty() && !dis.isEmpty() && !link.isEmpty()) {
                         if (dBase.insertExam(new UpLoadeAdminModel(location, dis, link))) {
-                            dBase.insertNotifications("تم رفع مهمة جديدة");
+                            dBase.insertNotifications("تم رفع إختبار جديد");
                             Toast.makeText(context, "تم الرفع", Toast.LENGTH_SHORT).show();
                             finish();
                         }
@@ -104,7 +104,7 @@ public class UploodScreen extends AppCompatActivity {
                 case 3:
                     if (!location.isEmpty() && !dis.isEmpty()) {
                         if (dBase.insertAdminDis(new UpLoadeAdminModel(location, dis))) {
-                            dBase.insertNotifications("تم رفع مهمة جديدة");
+                            dBase.insertNotifications("تم رفع إعلان جديد");
                             Toast.makeText(context, "تم الرفع", Toast.LENGTH_SHORT).show();
                             finish();
                         }
@@ -112,7 +112,7 @@ public class UploodScreen extends AppCompatActivity {
                 case 4:
                     if (!location.isEmpty() && !dis.isEmpty()) {
                         if (dBase.insertAdminDis(new UpLoadeAdminModel(location, dis))) {
-                            dBase.insertNotifications("تم رفع مهمة جديدة");
+                            dBase.insertNotifications("تم رفع واحب  جديد");
                             Toast.makeText(context, "تم الرفع", Toast.LENGTH_SHORT).show();
                             finish();
                         }
@@ -120,7 +120,7 @@ public class UploodScreen extends AppCompatActivity {
                 case 5:
                     if (!location.isEmpty() && !dis.isEmpty() && !link.isEmpty()) {
                         if (dBase.insertViedo(new UpLoadeAdminModel(location, dis, link))) {
-                            dBase.insertNotifications("تم رفع مهمة جديدة");
+                            dBase.insertNotifications("تم رفع فيديو جديد");
                             Toast.makeText(context, "تم الرفع", Toast.LENGTH_SHORT).show();
                             finish();
                         }

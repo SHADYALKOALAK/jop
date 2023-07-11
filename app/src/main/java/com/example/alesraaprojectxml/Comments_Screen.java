@@ -8,6 +8,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.view.View;
 
 import com.example.alesraaprojectxml.databinding.ActivityCommentsScreenBinding;
 
@@ -63,6 +64,13 @@ public class Comments_Screen extends AppCompatActivity implements AdapterHomeWor
         binding.iconMassage.setOnClickListener(v -> {
             startActivity(new Intent(context, MassagesStudentWethAdmin.class));
             overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
+        });
+        binding.iconArrow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+                overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
+            }
         });
 
 
