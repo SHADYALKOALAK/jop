@@ -10,12 +10,15 @@ import android.widget.Toast;
 
 import com.example.alesraaprojectxml.databinding.ActivitySginUpScreenBinding;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.ktx.Firebase;
 
 public class SignUpScreen extends AppCompatActivity {
     private ActivitySginUpScreenBinding binding;
     private Context context = SignUpScreen.this;
     private DBase dBase;
     FirebaseAuth auth = FirebaseAuth.getInstance();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +52,7 @@ public class SignUpScreen extends AppCompatActivity {
                         Toast.makeText(context, "تم الحفظ بنجاح ", Toast.LENGTH_SHORT).show();
                         finish();
                         overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
+
                     }
                 });
             }
