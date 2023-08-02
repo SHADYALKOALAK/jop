@@ -2,8 +2,8 @@
     <!-- Base application theme. -->
     <style name="Theme.AlesraaProjectXML" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">#056200EE</item>
-        <item name="colorPrimaryVariant">#003700B3</item>
+        <item name="colorPrimary">#00000000</item>
+        <item name="colorPrimaryVariant">#00000000</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>

@@ -9,11 +9,13 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.example.alesraaprojectxml.databinding.ActivitySginUpScreenBinding;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class SignUpScreen extends AppCompatActivity {
     private ActivitySginUpScreenBinding binding;
     private Context context = SignUpScreen.this;
     private DBase dBase;
+    FirebaseAuth auth = FirebaseAuth.getInstance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,13 +43,21 @@ public class SignUpScreen extends AppCompatActivity {
             } else if (!confirmPassword.equals(password)) {
                 binding.editConfirmPassword.setError("تاكد من تطابق كلمة المرور");
             } else {
-                if (dBase.insertUser(new UserSignUpModel(userName, number, password))) {
-                    startActivity(new Intent(context, LoginScreen.class));
-                    Toast.makeText(context, "تم الحفظ بنجاح ", Toast.LENGTH_SHORT).show();
-                    finish();
-                    overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
-                }
+                auth.createUserWithEmailAndPassword(number, password).addOnCompleteListener(task -> {
+                    if (task.isSuccessful()) {
+                        startActivity(new Intent(context, LoginScreen.class));
+                        Toast.makeText(context, "تم الحفظ بنجاح ", Toast.LENGTH_SHORT).show();
+                        finish();
+                        overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
+                    }
+                });
             }
         });
     }
+//    if (dBase.insertUser(new UserSignUpModel(userName, number, password))) {
+//        startActivity(new Intent(context, LoginScreen.class));
+//        Toast.makeText(context, "تم الحفظ بنجاح ", Toast.LENGTH_SHORT).show();
+//        finish();
+//        overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
+//    }
 }

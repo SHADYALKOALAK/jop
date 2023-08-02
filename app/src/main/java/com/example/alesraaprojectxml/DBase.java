@@ -19,7 +19,6 @@ public class DBase extends SQLiteOpenHelper {
     public static final String COL_PASSWORD = "user_password";
     public static final int DB_VERSION = 23;
     public static final String TN_COMMENT = "comment";
-    public static final String COL_COMMENT = "massage";
     public static final String TN_MASSAGE = "massageToAdmin";
     public static final String COL_MASSAGE = "colMassage";
     public static final String COL_NAME_PERSONAL = "namePerson";

@@ -13,7 +13,7 @@ import com.example.alesraaprojectxml.databinding.CustomdailogBinding;
 
 public class ReplyAdmin extends AppCompatActivity {
     private CustomdailogBinding customDialog;
-    Context context = ReplyAdmin.this;
+    private Context context = ReplyAdmin.this;
     private AlertDialog dialog;
     private DBase dBase;
 
@@ -37,7 +37,7 @@ public class ReplyAdmin extends AppCompatActivity {
                     builder.setView(customDialog.getRoot());
                     customDialog.btnYes.setOnClickListener(v1 -> {
                         startActivity(new Intent(context, SureSend_2.class));
-                        dBase.insertNotifications("تم الرد من قبل المحاضر د.أحمد عزات : " +massage);
+                        dBase.insertNotifications("تم الرد من قبل المحاضر د.أحمد عزات : " + massage);
                         overridePendingTransition(R.anim.slide_in, R.anim.slide_out);
                     });
                     customDialog.btnNo.setOnClickListener(v12 -> {

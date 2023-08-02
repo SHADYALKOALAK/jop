@@ -137,7 +137,5 @@ public class HomePageScreen extends AppCompatActivity implements Rc_courses.Hand
     @Override
     public void clickHandle(int position, String nameCourse, String idCourse) {
         startActivity(new Intent(getBaseContext(), e_Learning.class));
-
-
     }
 }

@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="830dp"
     android:orientation="vertical"
+    android:background="#00000000"
     tools:context=".SignUpScreen">
 
     <LinearLayout
@@ -85,7 +86,7 @@
         android:layout_marginTop="7dp"
         android:layout_marginEnd="16dp"
         android:background="@drawable/edit_login"
-        android:inputType="number"
+        android:inputType="textEmailAddress"
         android:hint="  ادخل رقمك الجامعي"
         android:paddingStart="12dp"
         android:paddingEnd="12dp"
